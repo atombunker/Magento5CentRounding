@@ -20,8 +20,6 @@ class Openstream_RappenRounding_Model_TaxSalesTotalQuoteSubtotal extends Mage_Ta
         if($helper->getScope() == 'totals' || $helper->getScope() == 'all') {
             $address->setSubtotalInclTax($helper->_roundBase5($address->getSubtotalInclTax()));
             $address->setBaseSubtotalInclTax($helper->_roundBase5($address->getBaseSubtotalInclTax()));
-            $address->setTotalAmount('subtotal', $helper->_roundBase5($address->getTotalAmount('subtotal')));
-            $address->setBaseTotalAmount('subtotal', $helper->_roundBase5($address->getBaseTotalAmount('subtotal')));
         }
 
         return $this;
